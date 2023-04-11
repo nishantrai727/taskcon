@@ -16,17 +16,13 @@ const USER= require('./model/userSchema')
 
 app.use(require('./router/auth'))
 
+app.get("/",async (req,res)=>{
+    res.send("Server is running");
+})
+
 const PORT = process.env.PORT
 
 
-// const middleware = (req,res,next) =>{
-//     console.log("middleware")
-//     next()
-// }
-
-// app.get('/', (req,res) => {
-//     res.send("Hello from server")
-// })
 
 app.listen(PORT, ()=>{
     console.log(`listening at port ${PORT}`)
