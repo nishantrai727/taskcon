@@ -6,7 +6,7 @@ const app= express()
 
 app.use(cors())
 
-dotenv.config({path : '../config.env'});
+dotenv.config();
 
 //Database connection
 require('./db/conn');

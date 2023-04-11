@@ -2,6 +2,7 @@ const mongoose= require('mongoose')
 
 const DB= process.env.DATABASE
 
+
 mongoose.set("strictQuery", false);
 
 mongoose.connect(DB, {
@@ -9,4 +10,6 @@ mongoose.connect(DB, {
     useUnifiedTopology: true
 }).then(()=>{
     console.log('Database connected')
-}).catch((err)=> console.log('connection failed'))
+}).catch((err)=> {
+    console.log(err);
+    console.log('connection failed')})
